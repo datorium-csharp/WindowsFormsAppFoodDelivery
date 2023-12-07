@@ -16,5 +16,10 @@ namespace WindowsFormsAppFoodDelivery
             this.name = name;
             this.address = address;
         }
+
+        public override string ToString() 
+        { 
+            return $"{this.name}; {this.address}";   
+        }
     }
 }

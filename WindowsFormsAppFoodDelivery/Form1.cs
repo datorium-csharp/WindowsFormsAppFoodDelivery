@@ -58,8 +58,28 @@ namespace WindowsFormsAppFoodDelivery
             {
                 var selectedIndex = listBoxRestaurants.SelectedIndex;
                 restaurants[selectedIndex].AddMenuItem(food);
-            }
 
+                //refresh listBoxMenu
+                listBoxMenu.Items.Clear();
+
+                foreach(var menuItem in restaurants[selectedIndex].menu)
+                {
+                    listBoxMenu.Items.Add(menuItem);
+                }
+            }
+        }
+
+        private void listBoxRestaurants_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var selectedIndex = listBoxRestaurants.SelectedIndex;
+            
+            //refresh listBoxMenu
+            listBoxMenu.Items.Clear();
+
+            foreach (var menuItem in restaurants[selectedIndex].menu)
+            {
+                listBoxMenu.Items.Add(menuItem);
+            }
         }
     }
 }

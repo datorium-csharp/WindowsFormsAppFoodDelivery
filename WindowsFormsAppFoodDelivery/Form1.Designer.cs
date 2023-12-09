@@ -47,6 +47,7 @@
             this.listBoxRestaurants.Name = "listBoxRestaurants";
             this.listBoxRestaurants.Size = new System.Drawing.Size(200, 173);
             this.listBoxRestaurants.TabIndex = 0;
+            this.listBoxRestaurants.SelectedIndexChanged += new System.EventHandler(this.listBoxRestaurants_SelectedIndexChanged);
             // 
             // listBoxMenu
             // 

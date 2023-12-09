@@ -10,6 +10,7 @@ namespace WindowsFormsAppFoodDelivery
     {
         public string name;
         public string address;
+        public List<Point> points = new List<Point>();
 
         public Customer(string name, string address)
         {

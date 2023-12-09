@@ -10,6 +10,7 @@ namespace WindowsFormsAppFoodDelivery
     {
         public string name;
         public string address;
+        private List<Food> menu = new List<Food>();
 
         public Restaurant(string name, string address)
         {
@@ -20,6 +21,11 @@ namespace WindowsFormsAppFoodDelivery
         public override string ToString() 
         { 
             return $"{this.name}; {this.address}";   
+        }
+
+        public void AddMenuItem(Food food)
+        {
+            menu.Add(food);
         }
     }
 }

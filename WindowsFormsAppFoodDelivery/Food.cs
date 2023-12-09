@@ -20,5 +20,10 @@ namespace WindowsFormsAppFoodDelivery
             this.type = type;
             this.price = price;
         }
+
+        public override string ToString()
+        {
+            return $"{this.type}; {this.name}; {this.price}";
+        }
     }
 }

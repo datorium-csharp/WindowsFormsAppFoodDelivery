@@ -33,5 +33,33 @@ namespace WindowsFormsAppFoodDelivery
             //front-end coding
             listBoxRestaurants.Items.Add(restaurant);
         }
+
+        private void buttonAddFood_Click(object sender, EventArgs e)
+        {
+            //back-end coding
+            if (
+                    String.IsNullOrEmpty(textBoxFoodName.Text) ||
+                    String.IsNullOrEmpty(textBoxFoodDescription.Text) ||
+                    String.IsNullOrEmpty(textBoxFoodType.Text) ||
+                    String.IsNullOrEmpty(textBoxFoodPrice.Text)
+                )
+            {
+                return;
+            }
+            
+            var food = new Food(
+                    textBoxFoodName.Text,
+                    textBoxFoodDescription.Text,
+                    textBoxFoodType.Text,
+                    Convert.ToDouble(textBoxFoodPrice.Text)
+                );
+
+            if (listBoxRestaurants.SelectedIndex != -1)
+            {
+                var selectedIndex = listBoxRestaurants.SelectedIndex;
+                restaurants[selectedIndex].AddMenuItem(food);
+            }
+
+        }
     }
 }

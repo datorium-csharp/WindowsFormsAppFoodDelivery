@@ -33,6 +33,11 @@
             this.buttonAddRestaurant = new System.Windows.Forms.Button();
             this.textBoxRestaurantName = new System.Windows.Forms.TextBox();
             this.textBoxRestaurantAddress = new System.Windows.Forms.TextBox();
+            this.textBoxFoodName = new System.Windows.Forms.TextBox();
+            this.textBoxFoodDescription = new System.Windows.Forms.TextBox();
+            this.textBoxFoodType = new System.Windows.Forms.TextBox();
+            this.textBoxFoodPrice = new System.Windows.Forms.TextBox();
+            this.buttonAddFood = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBoxRestaurants
@@ -75,11 +80,54 @@
             this.textBoxRestaurantAddress.Size = new System.Drawing.Size(200, 20);
             this.textBoxRestaurantAddress.TabIndex = 4;
             // 
+            // textBoxFoodName
+            // 
+            this.textBoxFoodName.Location = new System.Drawing.Point(275, 244);
+            this.textBoxFoodName.Name = "textBoxFoodName";
+            this.textBoxFoodName.Size = new System.Drawing.Size(200, 20);
+            this.textBoxFoodName.TabIndex = 5;
+            // 
+            // textBoxFoodDescription
+            // 
+            this.textBoxFoodDescription.Location = new System.Drawing.Point(275, 270);
+            this.textBoxFoodDescription.Name = "textBoxFoodDescription";
+            this.textBoxFoodDescription.Size = new System.Drawing.Size(200, 20);
+            this.textBoxFoodDescription.TabIndex = 6;
+            // 
+            // textBoxFoodType
+            // 
+            this.textBoxFoodType.Location = new System.Drawing.Point(275, 296);
+            this.textBoxFoodType.Name = "textBoxFoodType";
+            this.textBoxFoodType.Size = new System.Drawing.Size(200, 20);
+            this.textBoxFoodType.TabIndex = 7;
+            // 
+            // textBoxFoodPrice
+            // 
+            this.textBoxFoodPrice.Location = new System.Drawing.Point(275, 322);
+            this.textBoxFoodPrice.Name = "textBoxFoodPrice";
+            this.textBoxFoodPrice.Size = new System.Drawing.Size(200, 20);
+            this.textBoxFoodPrice.TabIndex = 8;
+            // 
+            // buttonAddFood
+            // 
+            this.buttonAddFood.Location = new System.Drawing.Point(275, 360);
+            this.buttonAddFood.Name = "buttonAddFood";
+            this.buttonAddFood.Size = new System.Drawing.Size(200, 47);
+            this.buttonAddFood.TabIndex = 9;
+            this.buttonAddFood.Text = "Add Food";
+            this.buttonAddFood.UseVisualStyleBackColor = true;
+            this.buttonAddFood.Click += new System.EventHandler(this.buttonAddFood_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(607, 444);
+            this.ClientSize = new System.Drawing.Size(519, 447);
+            this.Controls.Add(this.buttonAddFood);
+            this.Controls.Add(this.textBoxFoodPrice);
+            this.Controls.Add(this.textBoxFoodType);
+            this.Controls.Add(this.textBoxFoodDescription);
+            this.Controls.Add(this.textBoxFoodName);
             this.Controls.Add(this.textBoxRestaurantAddress);
             this.Controls.Add(this.textBoxRestaurantName);
             this.Controls.Add(this.buttonAddRestaurant);
@@ -99,6 +147,11 @@
         private System.Windows.Forms.Button buttonAddRestaurant;
         private System.Windows.Forms.TextBox textBoxRestaurantName;
         private System.Windows.Forms.TextBox textBoxRestaurantAddress;
+        private System.Windows.Forms.TextBox textBoxFoodName;
+        private System.Windows.Forms.TextBox textBoxFoodDescription;
+        private System.Windows.Forms.TextBox textBoxFoodType;
+        private System.Windows.Forms.TextBox textBoxFoodPrice;
+        private System.Windows.Forms.Button buttonAddFood;
     }
 }
 
